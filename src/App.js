@@ -5,6 +5,8 @@ function App() {
   // Crisp Widget SDK
   useEffect(() => {
     (function () {
+      // If we inject Crisp Widget SDK in the app after a second, the button doesn't seems to be working and window.$crisp.widgetId is null
+      // If we inject Crisp Widget SDK directly (without setTimeout), the button works and window.$crisp.widgetId is not null
       setTimeout(() => {
         var s = document.createElement("script");
 
